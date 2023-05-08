@@ -1,10 +1,16 @@
-import pandas as pd
-import nltk
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
+str1 = "Haveing beautful place place something the the this it the it it it"
 
-df = pd.read_excel("Chat Statistics.xlsx", header=2)
+lst = str1.split()
 
-df1 = df["Conversations"]
+dic = {}
 
-print(df1.head(1))
+for i in lst:
+    if i in dic:
+        dic[i] += 1
+        
+    else:
+        dic[i] = 1
+        
+Keymax = max(zip(dic.values(), dic.keys()))[1]
+
+print(len(Keymax))
