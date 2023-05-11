@@ -1,5 +1,3 @@
-import time
-
 import openai
 import pandas as pd
 import tiktoken
